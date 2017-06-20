@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+<script src="ngEnter.js" > </script>
+</head>
+<div ng-app="myApp">
+
+    <form name="saveTemplateData" ng-submit =submitForm(); ng-controller="FormCtrl">
+
+        First name:    <br/><input type="text" name="form.firstname">    <br/><br/>
+        Email Address: <br/><input type="text" ng-model="form.emailaddress"> <br/><br/>
+
+        <textarea rows="5" cols="55" ng-model="form.textconfession">Write your confession </textarea>
+
+        <br/><br/>
+
+        <input type="radio" ng-model="form.gender" value="female" />Female ...
+        <input type="radio" ng-model="form.gender" value="male" />Male <br/>
+
+        <br/><br/>
+
+        <input type="checkbox" ng-model="form.member" value="true"/> Already a member
+        <input type="checkbox" ng-model="form.member" value="false"/> Not a member
+
+        <br/><br/>
+
+        <input type="submit" ngClick="Submit">
+
+    </form>
+
+    <div>
+       <ul ng-repeat="x in messages">
+            <li ng-if="x.message">{{x.message}}</li>
+       </ul>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>
+
